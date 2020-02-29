@@ -1,0 +1,76 @@
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/categories.csv' 
+INTO TABLE Categories 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/customers.csv' 
+INTO TABLE Customers
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/employees.csv' 
+INTO TABLE Employees 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/employee-territories.csv' 
+INTO TABLE EmployeeTerritories
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/order-details.csv' 
+INTO TABLE OrderDetails
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/orders.csv' 
+INTO TABLE Orders
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/products.csv' 
+INTO TABLE Products
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/region.csv' 
+INTO TABLE Region
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/shippers.csv' 
+INTO TABLE Shippers
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/suppliers.csv' 
+INTO TABLE Suppliers
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/home/sharath/Desktop/DataGrokr/Northwind_database_csv/territories.csv' 
+INTO TABLE Territories
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;

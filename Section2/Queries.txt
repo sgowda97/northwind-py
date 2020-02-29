@@ -1,0 +1,30 @@
+SELECT TitleOfCourtesy, FirstName, LastName
+FROM `Employees`
+WHERE TitleOfCourtesy
+LIKE 'M%';
+
+SELECT Orders.OrderID, Customers.*, Orders.Freight, (Orders.Freight+Orders.Freight*10/100) AS NewFreight
+FROM `Customers`
+LEFT JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+WHERE Freight >= 500.00;
+
+SELECT Products.ProductName, OrderDetails.Quantity
+FROM `OrderDetails`
+INNER JOIN Products ON Products.ProductID = OrderDetails.ProductID
+ORDER BY Quantity DESC;
+
+SELECT COUNT(Freight) AS NumberOfOrders, PriceRange
+FROM (SELECT Freight,
+  CASE
+    WHEN Freight < 51 THEN '< 51'
+    WHEN Freight BETWEEN 51 AND 100 THEN '51-100'
+    WHEN Freight BETWEEN 101 AND 150 THEN '101-150'
+    WHEN Freight > 150 THEN '> 150'
+  END AS PriceRange
+FROM Orders) alias
+GROUP BY PriceRange;
+
+SELECT Customers.CustomerID, Customers.ContactName
+FROM `Customers`
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+WHERE Orders.CustomerID IS NULL;

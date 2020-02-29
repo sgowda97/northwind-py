@@ -1,0 +1,24 @@
+Section 1: Environment setup and data loading.
+    1. Install MySQL (server and client) on your laptop:
+    2. Load the Northwind dataset into the cluster
+        a. Northwind database is a set of data sets that is shipped with Microsoft Access and is used in learning SQL. There are several resources available online to learn more about Northwind. (https://theaccessbuddy.wordpress.com/2011/07/03/northwind-database-explained/)
+        b. We have sampled down the files and create a zipped file. You can download the files from here. 
+        c. The ER diagram is also present along with the files. Please review the data model and understand the relationship between the entities.
+        d. Create DDL statements using the ERD diagram and create those files in MySQL. Load the files into those tables. The table names, column names and data types should match with what is provided. If your schema doesn’t match with ours, we will not be able to test your code.
+
+Section 2: Working with data and SQL.
+    a. For this task you must write the SQL statements that will provide the necessary results. 
+        i. Create a report showing the title of courtesy and the first and last name of all employees whose title of courtesy begins with "M".
+        ii. Tax rates have gone up. If the cost of freight is greater than or equal to $500.00, it will now be taxed by 10%. Create a report that shows the order id and customer details, freight cost, freight cost with the new tax for all orders of $500 or more. (Orders and Customers).
+        iii. Make a list of products and the number of orders in which the product appears.  Sort the results based on products present in the greatest number of orders.
+        iv. Group the number of orders based on the freight cost using the following breaks: < $51, $51 - $100, $101 - $150, > $150
+        v. Identify the customers who have no orders placed.
+
+Section 3: Working with data using Python / pandas
+    a. For this task you must write a Python program that connects to the database and pull the data into a pandas dataframe, does the necessary operations in pandas and writes the final output to a S3 bucket.
+        i. Make a list of products and total up the number of actual items ordered. Sort the dataframe in decreasing order of items orders and save the file to S3 including the column headers.
+        ii. Group all the orders by the age of employees as of ‘2000-01-01’. The ages should be broken up as - under 30, 31 – 40, 41 – 50, above 50. Plot a histogram for the above results and save the image to S3.
+        iii. We have new tax rates based on the country of the order. Retrieve all order details and update the revised freight cost. Save the new order details into a file on S3.
+            i. [USA, Canada] – 15% tax
+            ii. [France, Germany, Belgium] - 10% tax
+            iii. Remaining countries – 5% tax
