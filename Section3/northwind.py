@@ -9,7 +9,7 @@ import sys
 
 from botocore.exceptions import NoCredentialsError
 
-class DataGrokr:
+class Northwind:
 	def __init__(self):
 		#db = pymysql.connect("DBADDR", "DBUNAME", "DBPASS", "DBNAME")
 		self.cursor = db.cursor()
@@ -120,10 +120,10 @@ class DataGrokr:
 			print("Credentials not available")
 			return False
 
-dg = DataGrokr()
-dg.list_products()
-dg.group_products()
-dg.increase_tax()
+nw = Northwind()
+nw.list_products()
+nw.group_products()
+nw.increase_tax()
 files = ["query1.csv", "query2.csv", "query2.png", "query3.csv"]
 for i in files:
-	dg.upload_bucket(i, 'dg-assessment', '\shreyas_s\%s'%i)
+	dg.upload_bucket(i, 'bucket-name', 'bucket-files-path')
